@@ -50,3 +50,37 @@ header{
 
     }
 }
+main{
+    background: green;
+    padding-top: 45px;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+.section_container{
+    display: flex;
+    justify-content: space-between;
+}
+.article_jumping{
+    width: 679px;
+    background: violet;
+    display: flex;
+    flex-direction: column;
+
+    h1{
+        color: var(--color-1);
+        font-family:"Poppins-SemiBold";
+        font-size: 120px;
+        line-height: 110px;
+
+    }
+    p{
+
+    }
+}
+.div_buttons{
+    background: rebeccapurple;
+    display: flex;
+    a{
+
+    }
+}
