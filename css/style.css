@@ -6,8 +6,12 @@
 }
 
 body{
-    background-color:var(--color-8) ;
+    background-image: url(../storage/img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
 }
+
 
 header{
     display: flex;
@@ -51,7 +55,6 @@ header{
     }
 }
 main{
-    background: green;
     padding-top: 45px;
     padding-left: 75px;
     padding-right: 75px;
@@ -59,10 +62,10 @@ main{
 .section_container{
     display: flex;
     justify-content: space-between;
+    margin-top: 111px;
 }
 .article_jumping{
     width: 679px;
-
     display: flex;
     flex-direction: column;
 
@@ -111,43 +114,52 @@ main{
 }
 
 .article_reviews {
-    background: red;
     padding: 20px;
 }
 .div_reviews-container {
-    background: blue;
+    width: 345px;
+    height: 202px;
+    background: var(--color-1);
+    border-radius: 18px;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .div_reviews-cards {
-    background: green;
-    padding: 20px;
 
     p{
-
+        font-family: "Poppins-Medium";
+        text-align: justify;
+        margin-top: 12px;
+        font-size: 18px;
+        color: var(--color-7);
+        width: 277px;
     }
 }
 .div_reviews-profile {
-    background: violet;
-    padding: 20px;
+    gap: 16px;
+    display: flex;
 
     img{
-        background: orange;
-        padding: 20px;
+        object-fit: contain;
 
     }
 }
 .div_reviews-rating {
-    background: yellow;
-    padding: 20px;
 
     h3{
+        color: var(--color-2);
+        font-family: "Poppins-Medium";
+        font-size: 28px;
 
     }
 }
 .div_reviews-stars {
-    background: olive;
+    margin-top: 5px;
     img{
-        background: turquoise;
+        padding: 0;
+
 
     }
 }
