@@ -4,37 +4,37 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     background-image: url(../storage/img/background.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
+    background-color: var(--color-8);
+
+    /* background-color: var(--color-8); */
 }
-
-
 header{
+    /* background: red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 45px;
     padding-left: 75px;
     padding-right: 75px;
-    
 
 }
-
-.header_logo{
-    img{
-
-    }
+.header__logo{
+    /* background: blue; */
 }
-.header_nav{
+.header__logo img{
+
+}
+.header__nav{
+    /* background: green; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 54px;
-
     li{
         list-style: none;
     }
@@ -45,56 +45,61 @@ header{
         font-size: 28px;
         display: flex;
     }
-    img{
-
-    }
 }
-.header_menu{
-    img{
 
-    }
-}
+
+
 main{
+    /* background: green; */
     padding-top: 45px;
     padding-left: 75px;
     padding-right: 75px;
 }
-.section_container{
+.section__container{
     display: flex;
     justify-content: space-between;
     margin-top: 111px;
 }
-.article_jumping{
-    width: 679px;
+
+.section__container article:nth-child(2){
     display: flex;
     flex-direction: column;
+    gap: 47px;
+}
 
+.article__jumping{
+    width: 679px;
+    /* background: violet; */
+    display: flex;
+    flex-direction: column;
     h1{
         color: var(--color-1);
-        font-family:"Poppins-SemiBold";
+        font-family: "Poppins-SemiBold";
         font-size: 120px;
         line-height: 91.4%;
-
+        
     }
     p{
         margin-top: 26px;
-        font-family:"Poppins-Medium";
-        font-size:24px ;
+        font-family: "Poppins-Medium";
+        font-size: 24px;
         color: var(--color-6);
         line-height: 123%;
     }
 }
-.div_buttons{
+
+.div__buttons{
     margin-top: 26px;
+    /* background: rebeccapurple; */
     display: flex;
     gap: 38px;
     a{
         width: 264px;
         height: 86px;
-        border-radius:14px ;
+        border-radius: 14px;
         outline: 1px solid var(--color-1);
         background: transparent;
-        font-family:"Poppins-Thin";
+        font-family: "Poppins-Thin";
         font-size: 32px;
         font-weight: 900;
         color: var(--color-1);
@@ -102,32 +107,123 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    a:hover{
-        outline: none;
-        backdrop-filter: blur(24px);
-    }
-    :hover a:hover{
-        outline: none;
-        backdrop-filter: blur(24px);
-    }
+    } 
+}
+.div__buttons:hover a:hover{
+    outline: none;
+    backdrop-filter: blur(24px);
 }
 
-.article_reviews {
-    padding: 20px;
+
+#reviews{
+    /* background: blue; */
+    /* height: 281px; */
+    height: 221px;
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-right: 27px;
+    display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--cards), var(--cardHeight));
+	gap: var(--cardMargin);
+	/* padding-bottom: calc(var(--cards) * var(--cardTopPadding)); */
+	/* margin-bottom: var(--cardMargin); */
 }
-.div_reviews-container {
+/* Oculta la barra de desplazamiento predeterminada */
+#reviews::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Personaliza el riel de la barra de desplazamiento */
+#reviews::-webkit-scrollbar-track {
+    background: transparent; /* Color del fondo */
+}
+
+/* Personaliza el 'thumb' de la barra de desplazamiento */
+#reviews::-webkit-scrollbar-thumb {
+    background: var(--color-1); /* Color del thumb */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estiliza el thumb cuando se pasa el cursor sobre él */
+#reviews::-webkit-scrollbar-thumb:hover {
+    background: var(--color-6);
+    cursor: grab;
+}
+#reviews::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
+}
+/* Estiliza los botones de la barra de desplazamiento (si los hay) */
+#reviews::-webkit-scrollbar-button {
+    display: none;
+}
+.div__reviews-container:nth-child(1){
+    --index: 1;
+}
+.div__reviews-container:nth-child(2){
+    --index: 2;
+
+    /* top: 20px; */
+}
+.div__reviews-container:nth-child(3){
+    --index: 3;
+    /* top: 40px; */
+}
+.div__reviews-container:nth-child(4){
+    --index: 4;
+    /* top: 60px; */
+}
+
+.article__reviews {
+    /* background: red; */
+    overflow-y: auto;
+}
+.div__reviews-container {
     width: 345px;
     height: 202px;
     background: var(--color-1);
     border-radius: 18px;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.div_reviews-cards {
 
+    border: 1px solid var(--color-5);
+    position: sticky;
+    top: 0px;
+    padding-top: calc(var(--index) * var(--cardToppadding));
+    z-index: var(--index);
+}
+.div__reviews-cards {
+    /* background: green; */
+    /* padding: 20px; */
+}
+.div__reviews-cards::after {
+   content: "x";
+   cursor: pointer;
+   font-family: "Poppins-Medium";
+   color: var(--color-1);
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 35px;
+   height: 35px;
+   background: var(--color-8);
+   border: 1px solid var(--color-6);
+   border-radius: 100%;
+   left: -18px;
+   top: -18px;
+}
+.div__reviews-profile {
+    /* background: violet; */
+    /* padding: 20px; */
+    gap: 16px;
+    display: flex;
+    img {
+        /* background: orange; */
+        object-fit: contain;
+        /* padding: 20px; */
+    }
     p{
         font-family: "Poppins-Medium";
         text-align: justify;
@@ -135,31 +231,26 @@ main{
         font-size: 18px;
         color: var(--color-7);
         width: 277px;
+        
     }
 }
-.div_reviews-profile {
-    gap: 16px;
-    display: flex;
 
+
+.div__reviews-rating {
+    /* background: yellow; */
+    /* padding: 20px; */
+}
+.div__reviews-rating h3{
+    color: var(--color-2);
+    font-family: "Poppins-Medium";
+    font-size: 28px;
+}
+.div__reviews-stars {
+    /* background: olive; */
+    /* padding: 20px; */
     img{
-        object-fit: contain;
-
-    }
-}
-.div_reviews-rating {
-
-    h3{
-        color: var(--color-2);
-        font-family: "Poppins-Medium";
-        font-size: 28px;
-
-    }
-}
-.div_reviews-stars {
-    margin-top: 5px;
-    img{
+        /* background: turquoise; */
         padding: 0;
-
-
+    
     }
 }
