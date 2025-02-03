@@ -254,3 +254,35 @@ main{
     
     }
 }
+.div__choose-type {
+    /* background: violet; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+   
+}
+.div__choose-type h3{
+    color: var(--color-1);
+    font-family: "Poppins-Medium";
+    font-size: 20px;
+}
+.div__choose-type-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.div__choose-type-buttons a{
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    background: var(--color-4);
+    font-family: "Poppins-Thin";
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--color-1);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    backdrop-filter: blur(3px);
+}
