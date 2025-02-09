@@ -1,17 +1,23 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // Seleccionar todos los grupos de cantidad de productos
+    const productContainers = document.querySelectorAll(".div__product-amount");
 
-// Funciones para incrementar y decrementar la cantidad
-function increaseAmount() {
-    let input = document.getElementById("amount");
-    input.value = parseInt(input.value) + 1;
-}
+    productContainers.forEach(container => {
+        // Obtener los botones y el input dentro de cada producto
+        const decreaseButton = container.querySelector(".amount-btn:first-child");
+        const increaseButton = container.querySelector(".amount-btn:last-child");
+        const amountInput = container.querySelector("input[name='amount']");
 
-function decreaseAmount() {
-    let input = document.getElementById("amount");
-    if (parseInt(input.value) > 0) {
-        input.value = parseInt(input.value) - 1;
-    }
-}
+        // Función para aumentar la cantidad
+        increaseButton.addEventListener("click", function () {
+            amountInput.value = parseInt(amountInput.value) + 1;
+        });
 
-// Agregar eventos a los botones
-document.getElementById("increase").addEventListener("click", increaseAmount);
-document.getElementById("decrease").addEventListener("click", decreaseAmount);
+        // Función para disminuir la cantidad (mínimo 0)
+        decreaseButton.addEventListener("click", function () {
+            if (parseInt(amountInput.value) > 0) {
+                amountInput.value = parseInt(amountInput.value) - 1;
+            }
+        });
+    });
+});
