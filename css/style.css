@@ -394,12 +394,121 @@ main{
     display: flex;
     justify-content: space-between;
 }
-.div__product-amount label{
+.div__product-amount label {
+    font-size: 16px;
+    font-weight: bold;
     color: var(--color-1);
-    font-family: "Poppins-Regular";
-    font-size: 28px;
 }
-.div__product-amount input[type="number"]{
+
+.amount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 2px solid var(--color-1);
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+.div__product-amount label {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-1);
+}
+
+.amount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 2px solid var(--color-1);
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.div__product-amount label {
+    font-size: 28px;
+    font-family: "Poppins-Regular";
+    font-weight: bold;
+    color: var(--color-1);
+}
+
+.amount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 2px solid var(--color-1);
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.amount-wrapper input {
+    text-align: center;
+    background: transparent;
+    width: 50px;
+    height: 35px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-1);
+}
+
+.amount-wrapper input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--color-1);
+}
+
+.amount-btn {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-1);
+    cursor: pointer;
+}
+
+.amount-btn:hover {
+    color: var(--color-2);
+}
+.amount-wrapper input {
+    text-align: center;
+    background: transparent;
+    width: 50px;
+    height: 35px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-1);
+}
+
+.amount-wrapper input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--color-1);
+}
+
+.amount-btn {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-1);
+    cursor: pointer;
+}
+
+.amount-btn:hover {
+    color: var(--color-2);
+}
+
+.div__product-amount:active input[type="number"]{
+    border-color: 1px solid var(--color-2);
+    color: var(--color-1);
+
+}
+.div__product-amount-input:active button[type="button"]{
+    color: var(--color-1);
+    
 }
 
 footer{
